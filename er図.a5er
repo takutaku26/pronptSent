@@ -1,0 +1,101 @@
+﻿# A5:ER FORMAT:18
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.19.1 Copyright © 1997 - 2024 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=PromptSearchTool
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=MySQL
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=TYPE_TABLE
+LName=種族テーブル
+Comment=
+TableInnerOption=
+TableOption=
+Page=Main
+Left=1350
+Top=350
+Field="種別","type","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="種別内容","type_content","VARCHAR(100)","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20240402223650
+Position="Main",1350,350
+ZOrder=7
+
+[Entity]
+PName=PROMPT_TABLE
+LName=プロンプトテーブル
+Comment=
+TableInnerOption=
+TableOption=
+Page=Main
+Left=950
+Top=300
+Field="番号","No","@INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="題名","title","VARCHAR(100)","NOT NULL",,"","題名",$FFFFFFFF,""
+Field="説明","description","VARCHAR(100)","NOT NULL",,"","説明",$FFFFFFFF,""
+Field="種別","type","@INT","NOT NULL",0,"","種別",$FFFFFFFF,""
+Field="プロンプトの内容","content","VARCHAR(100)","NOT NULL",,"","プロンプトの内容",$FFFFFFFF,""
+Field="出力例","output","VARCHAR(100)","NOT NULL",,"","出力例",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20240402224105
+Position="Main",950,300
+ZOrder=8
+
+[Relation]
+Entity1=PROMPT_TABLE
+Entity2=TYPE_TABLE
+RelationType1=2
+RelationType2=3
+Fields1=type
+Fields2=type
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1343,8657,1301,R,R,""
+Dependence=1
+Caption=
+PName=
+LineMode=0
+Bar1=134
+Bar2=866
+Bar3=130
+TermPos1=R
+TermPos2=R
+ZOrder=9
