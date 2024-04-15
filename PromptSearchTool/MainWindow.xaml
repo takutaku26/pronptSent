@@ -1,0 +1,84 @@
+﻿<Window x:Class="PromptSearchTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PromptSearchTool"
+        mc:Ignorable="d"
+        Title="プロンプト検索画面" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Grid.Column="0"
+              HorizontalAlignment="Left">
+
+            <ComboBox x:Name="serch_comboBox" Width="100" Margin="5"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Grid.Column="1"
+              HorizontalAlignment="Left">
+
+            <TextBox x:Name="serch_textBox" Width="100" Margin="5"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Grid.Column="2"
+              HorizontalAlignment="Left">
+
+            <Button x:Name="btnSerch" Content="検索" Width="100" Margin="5" Click="btnSerch_Click"/>
+
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Grid.Column="3"
+              HorizontalAlignment="Left">
+
+            <Button x:Name="btnRegistration" Content="登録" Width="100" Margin="5" Click="btnRegistration_Click"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="5"
+              HorizontalAlignment="Left">
+
+            <Grid Grid.Row="1"
+                      Grid.Column="0"
+                      Margin="6"
+                      HorizontalAlignment="Left"
+                      ScrollViewer.CanContentScroll="True">
+
+                <ScrollViewer  VerticalScrollBarVisibility="Auto">
+                    <Border BorderBrush="Gray">
+                        <local:ButtunPanel x:Name="panelButtunList" Orientation="Horizontal">
+
+                        </local:ButtunPanel>
+                    </Border>
+                </ScrollViewer>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
