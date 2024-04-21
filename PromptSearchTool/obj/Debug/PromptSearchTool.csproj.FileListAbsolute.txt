@@ -56,6 +56,7 @@ C:\Users\passp\PromptSearchTool_var.2\PromptSearchTool\obj\Debug\PromptSearchToo
 C:\Users\passp\PromptSearchTool_var.2\PromptSearchTool\obj\Debug\PromptSearchTool.csproj.CopyComplete
 C:\Users\passp\PromptSearchTool_var.2\PromptSearchTool\obj\Debug\PromptSearchTool.exe
 C:\Users\passp\PromptSearchTool_var.2\PromptSearchTool\obj\Debug\PromptSearchTool.pdb
+C:\Users\passp\PromptSearchTool_var.2\PromptSearchTool\obj\Debug\PromptSearchTool.csproj.AssemblyReference.cache
 C:\Users\passp\pronptSent\PromptSearchTool\bin\Debug\PromptSearchTool.exe.config
 C:\Users\passp\pronptSent\PromptSearchTool\bin\Debug\PromptSearchTool.exe
 C:\Users\passp\pronptSent\PromptSearchTool\bin\Debug\PromptSearchTool.pdb

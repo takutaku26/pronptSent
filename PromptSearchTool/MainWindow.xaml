@@ -27,9 +27,9 @@
 
         <Grid Grid.Row="0"
               Grid.Column="0"
-              HorizontalAlignment="Left">
+              HorizontalAlignment="Center">
 
-            <ComboBox x:Name="serch_comboBox" Width="100" Margin="5"/>
+            <ComboBox x:Name="serch_comboBox" Width="130" Margin="5" SelectionChanged="serch_comboBox_TextChanged"/>
 
         </Grid>
 
@@ -37,21 +37,13 @@
               Grid.Column="1"
               HorizontalAlignment="Left">
 
-            <TextBox x:Name="serch_textBox" Width="100" Margin="5"/>
+            <TextBox x:Name="serch_textBox" Width="150" Margin="0,5,0,5" TextChanged="serch_textBox_TextChanged"/>
 
         </Grid>
 
         <Grid Grid.Row="0"
               Grid.Column="2"
-              HorizontalAlignment="Left">
-
-            <Button x:Name="btnSerch" Content="検索" Width="100" Margin="5" Click="btnSerch_Click"/>
-
-        </Grid>
-
-        <Grid Grid.Row="0"
-              Grid.Column="3"
-              HorizontalAlignment="Left">
+              HorizontalAlignment="Right">
 
             <Button x:Name="btnRegistration" Content="登録" Width="100" Margin="5" Click="btnRegistration_Click"/>
 

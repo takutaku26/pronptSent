@@ -102,15 +102,6 @@ namespace PromptSearchTool
                                MessageBoxIcon.Error
                              );
             }
-            else if (String.IsNullOrEmpty(type_comboBox.Text))
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「種別」を記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                               );
-            }
             else if (String.IsNullOrEmpty(content_textBox.Text))
             {
                 Msgresult = System.Windows.Forms.MessageBox.Show(
@@ -258,7 +249,7 @@ namespace PromptSearchTool
                         result.Content = content_textBox.Text;
                         result.Output = output_textBox.Text;
                         result.DeleteFlag = 1;
-                        result.DeletingTime = DateTime.Now;
+                        result.UpdateTtime = DateTime.Now;
 
                         context.SubmitChanges();
                     }
@@ -321,12 +312,11 @@ namespace PromptSearchTool
 
                         MainTypeTable empty = new MainTypeTable();
                         var list = result.ToList();
-                        list.Insert(0, empty);
 
                         // コンボボックスに設定
                         this.type_comboBox.ItemsSource = list;
                         this.type_comboBox.DisplayMemberPath = "TypeContent";
-                        this.type_comboBox.SelectedIndex = SelectedCat.Type;
+                        this.type_comboBox.SelectedIndex = SelectedCat.Type - 1;
                     }
                 }
 

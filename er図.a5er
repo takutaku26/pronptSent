@@ -76,11 +76,10 @@ Field="出力例","output","VARCHAR(8087)","NOT NULL",,"","出力例",$FFFFFFFF,
 Field="削除フラグ","delete_flag","@INT","NOT NULL",,"","削除フラグ",$FFFFFFFF,""
 Field="作成時間","create_time","DATETIME",,,"","作成時間",$FFFFFFFF,""
 Field="更新時間","update_time","DATETIME",,,"","更新時間",$FFFFFFFF,""
-Field="削除時間","deleting_time","DATETIME",,,"","削除時間",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20240415172913
+ModifiedDateTime=20240420165529
 Position="MAIN",950,300
 ZOrder=8
 

@@ -32,9 +32,6 @@ namespace PromptSearchTool.Model
 
         [Column(Name = "update_time")]
         public DateTime UpdateTtime { get; set; }
-
-        [Column(Name = "deleting_time")]
-        public DateTime DeletingTime { get; set; }
     }
 
     [Table(Name = "TYPE_TABLE")]

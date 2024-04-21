@@ -38,17 +38,6 @@ namespace PromptSearchTool
         }
 
         /// <summary>
-        /// 検索ボタンクリック
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnSerch_Click(object sender, RoutedEventArgs e)
-        {
-            logger.Info("検索ボタンクリック");
-            SetButtonDynamicEvent();
-        }
-
-        /// <summary>
         /// 登録ボタンクリック
         /// </summary>
         /// <param name="sender"></param>
@@ -74,6 +63,28 @@ namespace PromptSearchTool
             ReferenceDisplay(sender, e);
 
             // 再検索
+            SetButtonDynamicEvent();
+        }
+
+        /// <summary>
+        /// テキストボックスでの検索処理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void serch_textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // 検索
+            SetButtonDynamicEvent();
+        }
+
+        /// <summary>
+        /// コンボボックスでの検索処理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void serch_comboBox_TextChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // 検索
             SetButtonDynamicEvent();
         }
 
