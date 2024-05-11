@@ -143,43 +143,37 @@ namespace PromptSearchTool
             }
             else if (Msgresult == System.Windows.Forms.DialogResult.Yes)
             {
-                using (var conn = new MySqlConnection("Database=mysql;Data Source=localhost;User Id=root;Password=root; sqlservermode=True;"))
+                using (var context = new PgDbContext())
                 {
-                    conn.Open();
 
-                    using (DataContext context = new DataContext(conn))
+                    var tPronpt = context.MainPronptTable;
+
+                    MainPronptTable mainPronptTable = new MainPronptTable();
+
+                    mainPronptTable.No = GetMaxNo();
+                    mainPronptTable.Title = title_textBox.Text;
+                    mainPronptTable.Description = description_textBox.Text;
+
+                    var tType = context.MainTypeTable;
+                    IQueryable<MainTypeTable> resultType;
+
+                    resultType = from x in tType
+                                 where x.TypeContent.StartsWith(type_comboBox.Text)
+                                 orderby x.Type
+                                 select x;
+
+                    foreach (var term in resultType)
                     {
-                        var tPronpt = context.GetTable<MainPronptTable>();
-
-                        MainPronptTable mainPronptTable = new MainPronptTable();
-
-                        mainPronptTable.No = GetMaxNo();
-                        mainPronptTable.Title = title_textBox.Text;
-                        mainPronptTable.Description = description_textBox.Text;
-
-                        Table<MainTypeTable> tType = context.GetTable<MainTypeTable>();
-                        IQueryable<MainTypeTable> resultType;
-
-                        resultType = from x in tType
-                                     where x.TypeContent.StartsWith(type_comboBox.Text)
-                                     orderby x.Type
-                                     select x;
-
-                        foreach (var term in resultType)
-                        {
-                            mainPronptTable.Type = term.Type;
-                        }
-                        mainPronptTable.Content = content_textBox.Text;
-                        mainPronptTable.Output = output_textBox.Text;
-                        mainPronptTable.DeleteFlag = 0;
-                        mainPronptTable.CreateTime = DateTime.Now;
-
-                        tPronpt.InsertOnSubmit(mainPronptTable);
-
-                        context.SubmitChanges();
+                        mainPronptTable.Type = term.Type;
                     }
+                    mainPronptTable.Content = content_textBox.Text;
+                    mainPronptTable.Output = output_textBox.Text;
+                    mainPronptTable.DeleteFlag = 0;
+                    mainPronptTable.CreateTime = DateTime.Now;
 
-                    conn.Close();
+                    // データ追加
+                    context.MainPronptTable.Add(mainPronptTable);
+                    context.SaveChanges();
                 }
 
                 Msgresult = System.Windows.Forms.MessageBox.Show(
@@ -199,21 +193,19 @@ namespace PromptSearchTool
         /// <returns></returns>
         private int GetMaxNo()
         {
-            using (var conn = new MySqlConnection("Database=mysql;Data Source=localhost;User Id=root;Password=root; sqlservermode=True;"))
+            using (var context = new PgDbContext())
             {
-                using (DataContext con = new DataContext(conn))
-                {
-                    try
-                    {
-                        Table<MainPronptTable> tPronpt = con.GetTable<MainPronptTable>();
-                        int result = tPronpt.Max(x => x.No);
 
-                        return result + 1;
-                    }
-                    catch
-                    {
-                        return 1;
-                    }
+                try
+                {
+                    var tPronpt = context.MainPronptTable;
+                    int result = tPronpt.Max(x => x.No);
+
+                    return result + 1;
+                }
+                catch
+                {
+                    return 1;
                 }
             }
         }
@@ -223,28 +215,19 @@ namespace PromptSearchTool
         /// </summary>
         private void SetcomboBoxTypeEvent()
         {
-            using (var conn = new MySqlConnection("Database=mysql;Data Source=localhost;User Id=root;Password=root; sqlservermode=True;"))
+            using (var context = new PgDbContext())
             {
-                conn.Open();
 
-                using (var command = conn.CreateCommand())
-                {
-                    using (DataContext con = new DataContext(conn))
-                    {
-                        Table<MainTypeTable> tType = con.GetTable<MainTypeTable>();
-                        IQueryable<MainTypeTable> result = from x in tType orderby x.Type select x;
+                var tType = context.MainTypeTable;
+                IQueryable<MainTypeTable> result = from x in tType orderby x.Type select x;
 
-                        MainTypeTable empty = new MainTypeTable();
-                        var list = result.ToList();
+                MainTypeTable empty = new MainTypeTable();
+                var list = result.ToList();
 
-                        // コンボボックスに設定
-                        this.type_comboBox.ItemsSource = list;
-                        this.type_comboBox.DisplayMemberPath = "TypeContent";
-                        this.type_comboBox.SelectedIndex = 0;
-                    }
-                }
-
-                conn.Close();
+                // コンボボックスに設定
+                this.type_comboBox.ItemsSource = list;
+                this.type_comboBox.DisplayMemberPath = "TypeContent";
+                this.type_comboBox.SelectedIndex = 0;
             }
         }
     }
