@@ -9,11 +9,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PromptSearchTool.Model
 {
-    [Table("PROMPT_TABLE")]
+    [Table("prompt_table")]
     public class MainPronptTable
     {
         [Key]
-        [Column("No")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("no")]
         public int No { get; set; }
         [Column("title")]
         public String Title { get; set; }
@@ -33,7 +34,7 @@ namespace PromptSearchTool.Model
         public DateTime UpdateTtime { get; set; }
     }
 
-    [Table("TYPE_TABLE")]
+    [Table("type_table")]
     public class MainTypeTable
     {
         [Key]
