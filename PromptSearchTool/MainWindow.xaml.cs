@@ -176,18 +176,21 @@ namespace PromptSearchTool
                     StackPanel stackPanel = new StackPanel();
                     Image image = new Image();
 
-                    var tType = context.MainTypeTable;
-
-                    IQueryable<MainTypeTable> resultType;
-
-                    resultType = from x in tType
-                                 where x.Type == term.Type
-                                 orderby x.Type
-                                 select x;
-
-                    foreach (var type in resultType)
+                    using (var contextImage = new PgDbContext())
                     {
-                        image.Source = new BitmapImage(new Uri("Assets/" + type.TypeImage, UriKind.Relative));
+                        var tType = contextImage.MainTypeTable;
+
+                        IQueryable<MainTypeTable> resultType;
+
+                        resultType = from x in tType
+                                     where x.Type == term.Type
+                                     orderby x.Type
+                                     select x;
+
+                        foreach (var type in resultType)
+                        {
+                            image.Source = new BitmapImage(new Uri("Assets/" + type.TypeImage, UriKind.Relative));
+                        }
                     }
 
                     image.Width = 30;
