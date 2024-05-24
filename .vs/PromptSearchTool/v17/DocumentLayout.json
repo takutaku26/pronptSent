@@ -3,10 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\passp\\pronptSent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PromptSearchTool||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|c:\\users\\passp\\pronptsent\\promptsearchtool\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+      "AbsoluteMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|c:\\users\\passp\\pronptsent\\promptsearchtool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|solutionrelative:promptsearchtool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,13 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PromptSearchTool",
-              "DocumentMoniker": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\PromptSearchTool.csproj",
-              "RelativeDocumentMoniker": "PromptSearchTool\\PromptSearchTool.csproj",
-              "ToolTip": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\PromptSearchTool.csproj",
-              "RelativeToolTip": "PromptSearchTool\\PromptSearchTool.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-24T08:43:43.154Z",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "PromptSearchTool\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml.cs",
+              "RelativeToolTip": "PromptSearchTool\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAAAPYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T09:13:21.968Z",
               "EditorCaption": ""
             }
           ]

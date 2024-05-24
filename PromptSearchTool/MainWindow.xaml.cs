@@ -244,7 +244,7 @@ namespace PromptSearchTool
         /// <param name="e"></param>
         private void btnDify_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://192.168.85.127/apps");
+            System.Diagnostics.Process.Start("http://192.168.85.127/apps");
         }
     }
 }
