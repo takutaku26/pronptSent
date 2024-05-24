@@ -236,5 +236,15 @@ namespace PromptSearchTool
                 this.serch_comboBox.SelectedIndex = 0;
             }
         }
+
+        /// <summary>
+        /// Difyを表示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDify_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://192.168.85.127/apps");
+        }
     }
 }

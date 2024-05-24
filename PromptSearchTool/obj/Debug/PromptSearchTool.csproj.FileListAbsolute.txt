@@ -143,6 +143,6 @@ C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.g.resource
 C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.Properties.Resources.resources
 C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.csproj.GenerateResource.cache
 C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.csproj.CoreCompileInputs.cache
-C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.csproj.CopyComplete
 C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.exe
 C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSearchTool.pdb
+C:\Users\passp\pronptSent\PromptSearchTool\obj\Debug\PromptSe.F066EB37.Up2Date

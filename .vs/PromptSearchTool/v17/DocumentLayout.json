@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\passp\\pronptSent\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|c:\\users\\passp\\pronptsent\\promptsearchtool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|solutionrelative:promptsearchtool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "PromptSearchTool\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml",
+              "RelativeToolTip": "PromptSearchTool\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-24T07:57:39.006Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
