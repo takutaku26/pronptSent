@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34601.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptSearchTool", "PromptSearchTool\PromptSearchTool.csproj", "{CF39285F-BFB5-43BE-83F1-51F740E85CFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptSearchTool", "PromptSearchTool\PromptSearchTool.csproj", "{B29BD3BB-AE96-4854-84FD-61CFB8DE00BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF39285F-BFB5-43BE-83F1-51F740E85CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF39285F-BFB5-43BE-83F1-51F740E85CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF39285F-BFB5-43BE-83F1-51F740E85CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF39285F-BFB5-43BE-83F1-51F740E85CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29BD3BB-AE96-4854-84FD-61CFB8DE00BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29BD3BB-AE96-4854-84FD-61CFB8DE00BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29BD3BB-AE96-4854-84FD-61CFB8DE00BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29BD3BB-AE96-4854-84FD-61CFB8DE00BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {841BEB01-2704-48C3-81D3-CC86698585C5}
+		SolutionGuid = {E456D4DC-B94A-4E72-AD29-43F4DAE6CAB5}
 	EndGlobalSection
 EndGlobal

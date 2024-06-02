@@ -1,9 +1,7 @@
 ﻿using log4net;
-using MySql.Data.MySqlClient;
 using PromptSearchTool.Model;
 using System;
 using System.Collections.Generic;
-using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +91,7 @@ namespace PromptSearchTool
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ReferenceDisplay(object sender, RoutedEventArgs e) 
+        private void ReferenceDisplay(object sender, RoutedEventArgs e)
         {
             using (var context = new PgDbContext())
             {

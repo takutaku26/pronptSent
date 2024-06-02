@@ -1,9 +1,7 @@
 ﻿using log4net;
-using MySql.Data.MySqlClient;
 using PromptSearchTool.Model;
 using System;
 using System.Collections.Generic;
-using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +9,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -77,126 +74,37 @@ namespace PromptSearchTool
         private void SavePromptReference(object sender, RoutedEventArgs e)
         {
 
-            DialogResult Msgresult = System.Windows.Forms.MessageBox.Show(
-              "保存します。よろしいですか？",
-              "プロンプト検索ツール",
-              MessageBoxButtons.YesNo,
-              MessageBoxIcon.Question
-            );
+            using (var context = new PgDbContext())
+            {
 
-            if (String.IsNullOrEmpty(title_textBox.Text))
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「題名」を記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                             );
-            }
-            else if (String.IsNullOrEmpty(description_textBox.Text))
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「簡単な説明」を記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                             );
-            }
-            else if (String.IsNullOrEmpty(content_textBox.Text))
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「プロンプトの内容」を記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                               );
-            }
-            else if (String.IsNullOrEmpty(output_textBox.Text))
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「出力例」を記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                               );
-            }
-            else if (title_textBox.Text.Length >= 101)
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「題名」は100文字以内で記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                );
-            }
-            else if (description_textBox.Text.Length >= 101)
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「簡単な説明」は100文字以内で記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                );
-            }
-            else if (content_textBox.Text.Length >= 8088)
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「プロンプトの内容」は8087文字以内で記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                );
-            }
-            else if (output_textBox.Text.Length >= 8088)
-            {
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "「出力例」は8087文字以内で記載して下さい。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error
-                );
-            }
-            else if (Msgresult == System.Windows.Forms.DialogResult.Yes)
-            {
-                using (var context = new PgDbContext())
+                var tPronpt = context.MainPronptTable;
+
+                var result = tPronpt.Single(x => x.No == SelectedPronpt.No);
+
+                result.Title = title_textBox.Text;
+                result.Description = description_textBox.Text;
+
+                var tType = context.MainTypeTable;
+                IQueryable<MainTypeTable> resultType;
+
+                resultType = from x in tType
+                             where x.TypeContent.StartsWith(type_comboBox.Text)
+                             orderby x.Type
+                             select x;
+
+                foreach (var term in resultType)
                 {
-
-                    var tPronpt = context.MainPronptTable;
-
-                    var result = tPronpt.Single(x => x.No == SelectedPronpt.No);
-
-                    result.Title = title_textBox.Text;
-                    result.Description = description_textBox.Text;
-
-                    var tType = context.MainTypeTable;
-                    IQueryable<MainTypeTable> resultType;
-
-                    resultType = from x in tType
-                                 where x.TypeContent.StartsWith(type_comboBox.Text)
-                                 orderby x.Type
-                                 select x;
-
-                    foreach (var term in resultType)
-                    {
-                        result.Type = term.Type;
-                    }
-                    result.Content = content_textBox.Text;
-                    result.Output = output_textBox.Text;
-                    result.DeleteFlag = 0;
-                    result.UpdateTtime = DateTime.Now;
-
-                    context.SaveChanges();
+                    result.Type = term.Type;
                 }
+                result.Content = content_textBox.Text;
+                result.Output = output_textBox.Text;
+                result.DeleteFlag = 0;
+                result.UpdateTtime = DateTime.Now;
 
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "データを追加しました。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Information
-                             );
-
-                this.Close();
+                context.SaveChanges();
             }
+
+            this.Close();
         }
 
         /// <summary>
@@ -204,56 +112,40 @@ namespace PromptSearchTool
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DeletionPromptReference(object sender, RoutedEventArgs e) 
+        private void DeletionPromptReference(object sender, RoutedEventArgs e)
         {
-            DialogResult Msgresult = System.Windows.Forms.MessageBox.Show(
-              "削除します。よろしいですか？",
-              "プロンプト検索ツール",
-              MessageBoxButtons.YesNo,
-              MessageBoxIcon.Question
-            );
 
-            if (Msgresult == System.Windows.Forms.DialogResult.Yes)
+            using (var context = new PgDbContext())
             {
-                using (var context = new PgDbContext())
+
+                var tPronpt = context.MainPronptTable;
+
+                var result = tPronpt.Single(x => x.No == SelectedPronpt.No);
+
+                result.Title = title_textBox.Text;
+                result.Description = description_textBox.Text;
+
+                var tType = context.MainTypeTable;
+                IQueryable<MainTypeTable> resultType;
+
+                resultType = from x in tType
+                             where x.TypeContent.StartsWith(type_comboBox.Text)
+                             orderby x.Type
+                             select x;
+
+                foreach (var term in resultType)
                 {
-
-                    var tPronpt = context.MainPronptTable;
-
-                    var result = tPronpt.Single(x => x.No == SelectedPronpt.No);
-
-                    result.Title = title_textBox.Text;
-                    result.Description = description_textBox.Text;
-
-                    var tType = context.MainTypeTable;
-                    IQueryable<MainTypeTable> resultType;
-
-                    resultType = from x in tType
-                                 where x.TypeContent.StartsWith(type_comboBox.Text)
-                                 orderby x.Type
-                                 select x;
-
-                    foreach (var term in resultType)
-                    {
-                        result.Type = term.Type;
-                    }
-                    result.Content = content_textBox.Text;
-                    result.Output = output_textBox.Text;
-                    result.DeleteFlag = 1;
-                    result.UpdateTtime = DateTime.Now;
-
-                    context.SaveChanges();
+                    result.Type = term.Type;
                 }
+                result.Content = content_textBox.Text;
+                result.Output = output_textBox.Text;
+                result.DeleteFlag = 1;
+                result.UpdateTtime = DateTime.Now;
 
-                Msgresult = System.Windows.Forms.MessageBox.Show(
-                               "データを削除しました。",
-                               "プロンプト検索ツール",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Information
-                             );
-
-                this.Close();
+                context.SaveChanges();
             }
+
+            this.Close();
         }
 
         /// <summary>

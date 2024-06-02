@@ -3,8 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\passp\\pronptSent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|c:\\users\\passp\\pronptsent\\promptsearchtool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|solutionrelative:promptsearchtool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\passp\\AppData\\Local\\Temp\\.vsdbgsrc\\07562dd9ba86a0a5fead5117dd68e3c724f52eea01f79d4441c442c042cad972\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +18,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "PromptSearchTool\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml.cs",
-              "RelativeToolTip": "PromptSearchTool\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAAAPYAAAAyAAAA",
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\passp\\AppData\\Local\\Temp\\.vsdbgsrc\\07562dd9ba86a0a5fead5117dd68e3c724f52eea01f79d4441c442c042cad972\\XamlReader.cs",
+              "RelativeDocumentMoniker": "..\\AppData\\Local\\Temp\\.vsdbgsrc\\07562dd9ba86a0a5fead5117dd68e3c724f52eea01f79d4441c442c042cad972\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\passp\\AppData\\Local\\Temp\\.vsdbgsrc\\07562dd9ba86a0a5fead5117dd68e3c724f52eea01f79d4441c442c042cad972\\XamlReader.cs [\u8AAD\u307F\u53D6\u308A\u5C02\u7528]",
+              "RelativeToolTip": "..\\AppData\\Local\\Temp\\.vsdbgsrc\\07562dd9ba86a0a5fead5117dd68e3c724f52eea01f79d4441c442c042cad972\\XamlReader.cs [\u8AAD\u307F\u53D6\u308A\u5C02\u7528]",
+              "ViewState": "AQIAAHgBAAAAAAAAAAAmwIgBAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:13:21.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T05:57:37.41Z",
+              "EditorCaption": " [\u8AAD\u307F\u53D6\u308A\u5C02\u7528]"
             }
           ]
         }
