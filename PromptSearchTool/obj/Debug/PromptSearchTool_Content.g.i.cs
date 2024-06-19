@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/other.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/chatgpt.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/json.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/powerpoint.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/program.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/proposal.png")]
 
 

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\passp\\pronptSent\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|c:\\users\\passp\\pronptsent\\promptsearchtool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|solutionrelative:promptsearchtool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|c:\\users\\passp\\pronptsent\\promptsearchtool\\pgdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF39285F-BFB5-43BE-83F1-51F740E85CFA}|PromptSearchTool\\PromptSearchTool.csproj|solutionrelative:promptsearchtool\\pgdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "PromptSearchTool\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\MainWindow.xaml.cs",
-              "RelativeToolTip": "PromptSearchTool\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAAAPYAAAAyAAAA",
+              "Title": "PgDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\PgDbContext.cs",
+              "RelativeDocumentMoniker": "PromptSearchTool\\PgDbContext.cs",
+              "ToolTip": "C:\\Users\\passp\\pronptSent\\PromptSearchTool\\PgDbContext.cs",
+              "RelativeToolTip": "PromptSearchTool\\PgDbContext.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T09:13:21.968Z",
+              "WhenOpened": "2024-06-19T12:12:29.678Z",
               "EditorCaption": ""
             }
           ]

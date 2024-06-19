@@ -219,6 +219,13 @@
   <ItemGroup>
     <Resource Include="Assets\other.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\chatgpt.png" />
+    <Resource Include="Assets\json.png" />
+    <Resource Include="Assets\powerpoint.png" />
+    <Resource Include="Assets\program.png" />
+    <Resource Include="Assets\proposal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
